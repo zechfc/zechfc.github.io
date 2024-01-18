@@ -1,0 +1,122 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(Images/Theme.jpg);
+    background-size: cover;
+
+}
+
+/* Structure */
+#content {
+    padding: 5px;
+    width: 80%;
+    margin: auto; /*Center horizontally */
+    border-radius: 5px;
+}
+
+#main-content
+{
+    background: #BFA980;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/*
+Creates cols for the body paragraphs
+*/
+
+.columns{
+    display: flex;
+}
+
+.columns section{
+    padding: 5px 20px; /*Top and bottom padding, then left and right padding */
+}
+
+/*Main Navigation*/
+#main-nav ul{
+    padding-left: 0; /*Remove list indent */
+}
+
+#main-nav li{
+    list-style-type: none; /*Remove Bullet */
+    background: #594832;
+    padding: 5px;
+    border-bottom: none;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+
+#main-nav a{
+    text-decoration: none; /*Remove underline */
+    color: #A60321;
+    background: #BFA980;
+    padding: 7px;
+
+
+}
+
+.one,
+#main-nav li{
+    flex: 1;
+}
+
+#main-nav li:hover{
+    background: #A60321;
+    border-bottom: 2px solid white;
+}
+/* Typography */
+
+h1 {
+    background: #A60321;
+
+    color: #261E14;
+    text-align: center;
+}
+
+/* Images */
+
+
+ img{
+    padding: 5px;
+    border: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+ }
+
+
+
+/*Table*/
+
+.table-content table, a{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    background-color: #8C7354;
+    color: white;
+
+}
+
+.table-content td{
+    border:2px solid #594832;
+}
+.table-content  table{
+    border:5px solid #594832;
+}
+
+.table-content a{
+    padding: none;
+}
+
+
+
+
+
+
+
+   
+
+
