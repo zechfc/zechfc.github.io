@@ -1,0 +1,100 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #D9B036;
+}
+
+/* Structure */
+#content {
+    padding: 5px;
+    width: 80%;
+    margin: auto; /*Center horizontally */
+    border-radius: 5px;
+}
+
+#main-header,
+#main-content,
+#main-footer{
+    background: #D9C8BF;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+
+
+}
+/*
+Not needed because the above block applies to them all 
+#main-content{
+
+}
+
+#main-footer{
+
+}
+*/
+
+/*Main Navigation*/
+#main-nav ul{
+    padding-left: 0; /*Remove list indent */
+}
+
+#main-nav li{
+    list-style-type: none; /*Remove Bullet */
+    background: #8C5C03;
+    padding: 5px;
+    border-bottom: 1px solid #D9B036;
+
+
+}
+
+#main-nav a{
+    text-decoration: none; /*Remove underline */
+    color: #025920;
+}
+
+/* Typography */
+
+h1 {
+    color: #025920;
+    text-align: center;
+}
+/* For larger resoultions */
+@media only screen and (min-width: 768px) {
+    .columns{
+        display: flex;
+    }
+
+    .columns section{
+        padding: 5px 20px; /*Top and bottom padding, then left and righ padding */
+    }
+    .one,
+    #main-nav li{
+        flex: 1;
+    }
+
+    #main-nav li{
+        text-align: center;
+        border-bottom: none;
+    }
+
+    #main-nav li{
+        text-align: center;
+        border-bottom: 2px solid transparent;
+    }
+
+    #main-nav li{
+        hover;
+    }
+
+    .two{
+        flex: 2;
+    }
+
+    .columns img {
+        max-width: 80%;
+        /*  for centering */
+        display: block;
+        margin: auto;
+    }
+}
+
