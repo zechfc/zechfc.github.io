@@ -1,0 +1,61 @@
+/*body*/
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #80BF9B;
+    color: #D9C589;
+
+}
+
+
+
+
+
+/*Main Navigation*/
+
+
+#nav li{
+    background: #D9C589;
+    padding: 5px;
+    border-bottom: none;
+    border-bottom: 2px solid transparent;
+    text-decoration: none; /*Remove underline */
+
+}
+
+#nav a{
+    color: black;
+    text-decoration: none; /*Remove underline */
+    padding: 7px;
+}
+
+
+
+
+.list a:hover{
+    background: #80BF9B;
+    color: #D9C589;
+    border-bottom: 2px solid white;
+
+}
+/* Typography */
+
+h1 {
+    background: #5E8C6E;
+
+    color:#262626;
+    text-align: center;
+}
+
+/* beg information  */
+
+#intro {
+    background:#A68A56;
+    padding: 5px;
+    border-bottom: none;
+    border-bottom: 2px solid transparent;}
+
+
+
+

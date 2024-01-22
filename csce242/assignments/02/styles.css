@@ -78,7 +78,6 @@ h1 {
 
  img{
     padding: 5px;
-    border: white;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -101,14 +100,18 @@ h1 {
 }
 
 .table-content td{
+    margin-left: auto;
+    margin-right: auto;
     border:2px solid #594832;
 }
 .table-content  table{
     border:5px solid #594832;
 }
 
+
 .table-content a{
-    padding: none;
+    background: none;
+
 }
 
 
