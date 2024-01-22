@@ -65,32 +65,16 @@ h1 {
     }
 
     .columns section{
+        background-color: white;
         padding: 5px 20px; /*Top and bottom padding, then left and righ padding */
     }
-    .one,
-    #main-nav li{
-        flex: 1;
-    }
-
-    #main-nav li{
-        text-align: center;
-        border-bottom: none;
-    }
-
-    #main-nav li{
-        text-align: center;
-        border-bottom: 2px solid transparent;
-    }
-
-    #main-nav li:hover{
-        border-bottom: 2px solid white;
-    }
-
-    .two{
+    .one{
         flex: 2;
     }
 
     .columns img {
+        background-color: black;
+
         max-width: 80%;
         /*  for centering */
         display: block;
