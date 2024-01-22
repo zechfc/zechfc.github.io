@@ -1,0 +1,169 @@
+/*body*/
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #80BF9B;
+
+}
+
+
+#main-header
+ {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px
+ }
+/*Main Navigation*/
+
+#main-nav li{
+    background: #D9C589;
+    text-align: center;
+    border: 2px solid;
+    color: green;
+    margin: auto;
+
+
+}
+
+#main-nav a{
+    color: aqua;
+    text-decoration: none; /*Remove underline */
+
+}
+
+
+#main-nav ul {
+    /* Remove list indent */
+    padding-inline-start: 0px;
+}
+
+
+
+/* Typography */
+
+h1 {
+    background: #5E8C6E;
+    color: red;
+    text-align: center;
+}
+
+p{
+    text-align: left;
+}
+
+
+
+/*sec nav */
+.columns .one{
+    display: flex;
+    padding: 0px 5px;
+    border: 2px solid;
+    
+}
+.columns .three{
+    display: flex;
+    padding: 0px 5px;
+    border: 2px transparent;
+    
+}
+.columns .bottom{
+    display: flex;
+    
+}
+
+
+
+.columns li{
+    display: flex;
+    
+}
+
+
+.columns section{
+    text-align: left;
+    background: #654321;
+    /*Top and bottom padding, then left and righ padding */
+}
+
+.columns h2{
+    padding: 0px;
+    text-align: left;
+    color: #262626;
+}
+
+
+.columns ul{
+    padding: 0px;
+    padding-inline-start: 0px;
+}
+
+.columns a{
+    padding: 0px;
+    color: orange;
+}
+
+
+/* For larger resoultions */
+@media only screen and (min-width: 600px) {
+    .columns{
+        display: flex;
+        padding: 15px 25px;
+
+    }
+    .columns .one{
+        display: flex;
+        padding: 0px 5px;
+        border: 2px solid;
+        
+    }
+    .columns .three{
+        display: flex;
+        padding: 0px 5px;
+        border: 2px transparent;
+        
+    }
+    .columns section{
+        text-align: left;
+        padding: 2px ;
+        background: #654321;
+        /*Top and bottom padding, then left and righ padding */
+    }
+    .one
+    {
+        flex: 1;
+    }
+    .two
+    {
+        flex: 2;
+    }
+  
+
+   
+    .columns img {
+        /*  for centering */
+        display: block;
+        margin: auto;
+        padding: 15px 15px; 
+
+       
+    }
+    #main-nav li {
+        text-align: center;
+        
+    }
+    .one,
+    #main-nav li {
+        flex: 1;
+    }
+
+    .columns .bottom{
+    display: flex;
+    
+}
+
+    
+}
+
+
+
