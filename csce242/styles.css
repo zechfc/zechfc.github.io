@@ -22,15 +22,16 @@ body{
 
 /*Main Navigation*/
 
-
+/* no longer need
 #nav li{
     background: #D9C589;
     padding: 5px;
     border-bottom: none;
     border-bottom: 2px solid transparent;
-    text-decoration: none; /*Remove underline */
+    text-decoration: none; /*Remove underline 
 
 }
+*/
 
 #nav a{
     color: black;
@@ -42,13 +43,15 @@ body{
 
 
 
-
+/* not needed right now
 .list a:hover{
     background: #80BF9B;
     color: #D9C589;
     border-bottom: 2px solid white;
 
 }
+*/
+
 /* Typography */
 
 h1 {
@@ -84,10 +87,6 @@ p{
         display: flex;
         flex-direction: row;
         padding: 15px 25px;
-
-    }
-
-    .columns a {
 
     }
 
