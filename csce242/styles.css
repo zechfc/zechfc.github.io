@@ -79,11 +79,26 @@ p{
 
 }
 
+.columns{
+    gap: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+    
+
+}
+
+.columns section{
+    text-align: center;
+    padding: 15px 25px;
+    background: #654321;
+    /*Top and bottom padding, then left and righ padding */
+}
 
 /* For larger resoultions */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
     .columns{
-        gap: 10px 20px;
+        gap: 20px 20px;
         display: flex;
         flex-direction: row;
         padding: 15px 25px;
