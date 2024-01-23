@@ -52,26 +52,26 @@ p{
     text-align: left;
 }
 
+.columns{
+    display: flex;
+width: 100%;
+flex-direction: column;
+flex-wrap: wrap;
 
+}
 
 /*sec nav */
 .columns .one{
     display: flex;
-    padding: 0px 5px;
     border: 2px solid;
     
 }
-.columns .three{
+.columns .two{
     display: flex;
     padding: 0px 5px;
     border: 2px transparent;
     
 }
-.columns .bottom{
-    display: flex;
-    
-}
-
 
 
 .columns li{
@@ -79,12 +79,15 @@ p{
     
 }
 
-
+/*
 .columns section{
     text-align: left;
     background: #654321;
-    /*Top and bottom padding, then left and righ padding */
+    /*Top and bottom padding, then left and righ padding 
 }
+    */
+
+
 
 .columns h2{
     padding: 0px;
@@ -103,40 +106,74 @@ p{
     color: orange;
 }
 
-
-/* For larger resoultions */
-@media only screen and (min-width: 600px) {
-    .columns{
-        display: flex;
-        padding: 15px 25px;
-
-    }
-    .columns .one{
-        display: flex;
-        padding: 0px 5px;
-        border: 2px solid;
-        
-    }
-    .columns .three{
-        display: flex;
-        padding: 0px 5px;
-        border: 2px transparent;
-        
-    }
-    .columns section{
-        text-align: left;
-        padding: 2px ;
-        background: #654321;
-        /*Top and bottom padding, then left and righ padding */
-    }
-    .one
+  .one
     {
         flex: 1;
     }
+    
     .two
     {
         flex: 2;
     }
+
+    .three
+    {
+        flex: 3;
+    }
+
+    #copyright 
+    {
+    
+        background-color: #5E8C6E;
+        width: 100%;
+        text-align: center;
+    }
+
+/* For larger resoultions */
+@media only screen and (min-width: 600px) {
+
+    .columns {
+        display: flex;
+        flex-direction: row;
+
+    }
+   
+    .one,
+    #main-nav li {
+        flex: 1;
+    }
+    .two {
+        flex: 2;
+    }
+    
+    .columns img {
+        max-width: 80%;
+        /* for centering */
+        display: block;
+        margin: auto;
+    }
+    #main-nav li {
+        text-align: center;
+        border-bottom: 2px solid transparent;
+    }
+
+}
+    /*main changeds*/
+    .columns section{
+        text-align: left;
+        padding: 2px ;
+        background: #654321;
+
+        /*Top and bottom padding, then left and righ padding */
+    }
+
+    #copyright 
+{
+
+    background-color: #5E8C6E;
+    width: 100%;
+}
+
   
 
    
@@ -148,22 +185,5 @@ p{
 
        
     }
-    #main-nav li {
-        text-align: center;
-        
-    }
-    .one,
-    #main-nav li {
-        flex: 1;
-    }
-
-    .columns .bottom{
-    display: flex;
-    
-}
-
-    
-}
-
 
 
