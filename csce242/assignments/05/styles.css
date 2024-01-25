@@ -4,12 +4,7 @@ body{
 }
 
 
-#header-top
- {
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 10px
- }
+
 /*top Navigation*/
 
 .top-nav li{
@@ -50,6 +45,14 @@ body{
     color: white;
 }
 
+#logos, img {
+    max-width: 60%;
+    max-height: 60%;
+    padding-left: 100px;
+
+    /* for centering */
+
+}
 @media only screen and (min-width: 768px) {
 
 .columns {
@@ -71,10 +74,11 @@ body{
 .three {
     flex: 3;
 }
-.columns img {
-    max-width: 100%;
+#logos, img {
+    max-width: 60%;
+    max-height: 60%;
+
     /* for centering */
-    display: block;
-    margin: auto;
+
 }
 }
