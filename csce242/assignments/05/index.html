@@ -10,10 +10,10 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
+        <header >
             <div id="header-top">
                 <div id="first-row "> <!--first row maybe put column here-->
-                    <nav class="top-nav"> <!--why does this break when i change it to a id-->
+                    <nav id="top"> <!--why does this break when i change it to a id-->
                         <section class="columns">
                         <ul class="columns three">
                             <li><a href="#">Gateways For: </a></li>
@@ -21,8 +21,11 @@
                             <li><a href="#">Faculty & Staff</a></li>
                             <li><a href="#">Alumni</a></li>
                             <li><a href="#">Parents & Families</a></li>
-                        </ul>
-                        <ul class="columns one">
+                            <li>                                 </li>
+                            <li>                                 </li>
+                            <li>                                 </li> <!--how else would I do this-->
+
+
                             <li><a href="#">Calendar</a></li>
                             <li><a href="#">MAP</a></li>
                             <li><a href="#">Directory</a></li>
@@ -34,15 +37,15 @@
                 </div>
                 <div id="header-middle"> <!--Second row maybe sub for col later-->
                     <div class="columns">
-                        <section class="one" id="logo">
+                        <section class="one" id="logo-pic">
                             <img src="https://place-hold.it/200x200">
                         </section>
-                        <section class="one">
+                        <section class="one" id="logo-text">
                             <h3>University of</h3>
                             <h1>South Carolina</h1>
                         </section>
                         <section class="three">
-                            <h1>search</h1>
+                            <h1 id="search">search</h1>
                         </section>
                     </div>
                     <h1 id="title" class="one">College of Engineering and computing</h1>
@@ -52,20 +55,28 @@
             </div>
         </header>
         <main id="main" class="columns">
-            <nav id="side-nav" class="one">
+            <nav id="side-nav" class="half
                 <ul>
-                    <li><a href="#">Gateways For: </a></li>
-                    <li><a href="#">Students</a></li>
-                    <li><a href="#">Faculty & Staff</a></li>
-                    <li><a href="#">Alumni</a></li>
-                    <li><a href="#">Parents & Families</a></li>
+                    <li id="first"><a href="#">College of Enginerring and Computing</a></li>
+                    <li><a href="#">News and Events</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li><a href="#">Student Experience</a></li>
+                    <li><a href="#">Connect and Support</a></li>
+                    <li><a href="#">Our Faculty and staff</a></li>
+                    <li><a href="#">About</a></li>
+
+
                 </ul>
             </nav>
             <div class="two">
-                <section class="columns">
-                    <img src="https://place-hold.it/200x200">
+                <div class="container">
+                <section id="main-photo"  class="columns">
+                    <img  src="https://place-hold.it/200x200">
 
                 </section>
+                </div>
                 <section class="columns">
                     <h1>Department of Computer Science and Engineering </h1>
                 </section>
@@ -76,6 +87,33 @@
 
                     </p>
                 </section>
+               
+                <article id=main-mid class="columns">
+                    <div class="columns">
+                    <section >                 
+                          <h2>Department Highlights</h2>        
+                        <div class="columns">    
+                        <section class="half">  
+                            <img  src="https://place-hold.it/200x200">
+
+                        </section>               
+
+                        <section class="two" >                 
+
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+                        <p>Faculty and students in the Department of Computer Science and Engineering are advancing the theories, principles and applications of computing to design computers, software, networks and processes. Our academic programs provide a foundation in one of the fastest growing fields in the world, and the faculty members engaged in research at USC ensure that we remain at the forefront of computing.
+
+                    </section >
+                </section >
+
+                </div>
+                    <section class="one">
+                        <section>
+                        <p>Faculty and students in the Department of Computer Science and Engineering are advancing the theories, principles and applications of computing to design computers, software, networks and processes. Our academic programs provide a foundation in one of the fastest growing fields in the world, and the faculty members engaged in research at USC ensure that we remain at the forefront of computing.
+                        </section>    
+                    </section>
+                </div>
+                </article>
             </div>
         </main>
         
