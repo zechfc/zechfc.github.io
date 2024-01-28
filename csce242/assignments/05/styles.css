@@ -25,7 +25,7 @@ main.columns, footer.columns{
     margin-left: 5px;
     margin-right: 5px;
 
-    text-align: end;
+    text-align: center;
     font-size: smaller;
 
 }
@@ -86,12 +86,9 @@ main.columns, footer.columns{
 }
 
 
-#logo-pic{
-    max-width: 100px;
-    max-height: 100px;
-    padding-right: 10px;
 
-}
+
+
 
 #logo-text h1{
     margin: 0px;
@@ -123,7 +120,8 @@ main.columns, footer.columns{
     padding-inline-start: 0%;
     margin-right: 20px;
     margin-top: 0;  
-   
+
+
 }
 #side-nav li{
     border-bottom: 2px solid gray;
@@ -158,13 +156,18 @@ main.columns, footer.columns{
     color: white;
 }
 
-img.logos  {
-    max-width: 100%;
-    max-height: 100%;
-    padding-left: 100px;
-
-
+#logo-pic {
+    flex: 0 0 auto;
+    width:100px;
+    padding-right: 5px;
 }
+
+#logo-pic img{
+    flex: 0 0 auto;
+    width:100px;
+    padding-right: 5px;
+}
+
 
 /*main*/
 
@@ -271,6 +274,9 @@ img.logos  {
     background-color: #ECECEC;
 }
 
+#bottom-box img{
+    max-width: 100%;
+}
 /*footer*/
 #footer{
 margin-top: 10%;
@@ -371,7 +377,7 @@ max-width: 5000px;
     margin-left: 5px;
     margin-right: 5px;
 
-    text-align: end;
+    text-align: center;
     font-size: smaller;
 
 }
@@ -394,8 +400,10 @@ max-width: 5000px;
     margin: 0%;
     right: 0;
     left: 0;
-    justify-content: center;
+    justify-content: left;
     border-top: 1px solid white;
+    padding-inline-start: 0px;
+
 
 }
 
@@ -427,10 +435,7 @@ max-width: 5000px;
 .two {
     flex: 2;
 }
-.one,
-.top-nav li {
-    flex: 1;
-}
+
 
 .three {
     flex: 3;
@@ -442,10 +447,41 @@ max-width: 5000px;
     /* for centering */
 
 }
+
+
 #logo-pic {
-    max-width: 10%;
-    max-height: 10%;
-    padding-right: 10px;
+    flex: 0 0 auto;
+    width:100px;
+    padding-right: 5px;
+}
+#side-nav ul 
+{
+    /* Remove list indent */
+    /* why is a comma needed here*/
+    list-style-type: none;
+    background-color: white;
+    padding-inline-start: 0%;
+    margin-right: 20px;
+    margin-top: 0;  
+   
+}
+
+#top li{
+    margin-left: 5px;
+    margin-right: 5px;
+
+    text-align: end;
+    font-size: smaller;
 
 }
+
+#footer-bottom li{
+    margin-left: 5px;
+    margin-right: 5px;
+
+    text-align: left;
+    font-size: smaller;
+
+}
+
 }
