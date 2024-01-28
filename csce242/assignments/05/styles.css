@@ -1,21 +1,23 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: white;
-margin: 0;
-padding-left: 20%;
+    background-color: white;
+    margin: 0;
+    padding-left: 20%;
     padding-right: 20%;
 
 
 
 }
 
-
-header{
-    }
+background-color{
+    width: 100%;
+}
 
 /*top Navigation*/
-#header-top{
-    max-width: max-content;
+main.columns, footer.columns{
+    position: sticky;
+
+
 }
 
 #top li{
@@ -41,25 +43,26 @@ header{
     /* Remove list indent */
     /* why is a comma needed here*/
     list-style-type: none;
-    background-color: #000000;
     margin: 0%;
     right: 0;
     left: 0;
     justify-content: end;
+    background-color: #000000;
+    
+
+
 
 }
 
 
-#top .three{
- padding-left: 20%;
 
-}
+
 
 /*middle header*/
 #header-middle{
-    
     background-color: #000000;
     color: white;
+   
     
 }
 
@@ -119,6 +122,7 @@ header{
     padding-inline-start: 0%;
     margin-right: 20px;
     margin-top: 0;  
+   
 }
 #side-nav li{
     border-bottom: 2px solid gray;
@@ -303,7 +307,6 @@ max-width: 5000px;
     /* Remove list indent */
     /* why is a comma needed here*/
     list-style-type: none;
-    margin: 0%;
     right: 0;
     left: 0;
     justify-content: end;
@@ -403,6 +406,8 @@ max-width: 5000px;
   }
 @media only screen and (min-width: 768px) {
 
+
+
 .columns {
     display: flex;
 }
@@ -434,6 +439,12 @@ max-width: 5000px;
 
 
     /* for centering */
+
+}
+#logo-pic {
+    max-width: 10%;
+    max-height: 10%;
+    padding-right: 10px;
 
 }
 }
