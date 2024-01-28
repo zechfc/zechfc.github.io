@@ -2,23 +2,17 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     margin: 0;
-
-
-
-
 }
 
-background-color{
-    width: 100%;
+.container{
+    padding-left: 20%;
+    padding-right: 20%;
 }
-
+header{
+    background-color: #000000;
+}
 /*top Navigation*/
-main.columns, footer.columns{
-    position: sticky;
-    padding-left: 0%;
 
-
-}
 
 #top li{
     margin-left: 5px;
@@ -29,6 +23,11 @@ main.columns, footer.columns{
 
 }
 
+#start {
+    font-weight: bolder;
+    font-size: larger;
+
+}
 
 #top a{
     
@@ -48,7 +47,9 @@ main.columns, footer.columns{
     left: 0;
     justify-content: end;
     background-color: #000000;
-    
+    padding-left: 20%;
+    padding-left: 20%;
+
 
 
 
@@ -102,7 +103,9 @@ main.columns, footer.columns{
     margin: 0;
     margin-bottom: 30px;
 
-    padding: 5px;
+    padding-left: 20%;
+    padding-right: 20%;
+
 }
 
 #header-middle .columns{
@@ -123,7 +126,7 @@ main.columns, footer.columns{
 
 }
 #side-nav li{
-    border-bottom: 2px solid gray;
+    border-bottom: .5px solid gray;
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -131,7 +134,7 @@ main.columns, footer.columns{
 }
 
 #first{
-    border-top: 2px solid gray;
+    border-top: .5px solid gray;
 }
 
 #side-nav a{
@@ -171,7 +174,7 @@ main.columns, footer.columns{
 /*main*/
 
 
-.container{
+.container2{
     width: 100%;
     height: 400px;
     background-image: url("https://place-hold.it/200x200");
@@ -195,11 +198,15 @@ main.columns, footer.columns{
 
 #text{
     border-bottom: 1px solid gray;
+    font-size: large;
+    
 
 }
 
 #text a{
     color: #73000A;
+    font-weight: bold;
+    text-decoration: 2px underline;
 }
 #text a:hover{
     color: white;
@@ -257,14 +264,32 @@ main.columns, footer.columns{
     object-fit: contain;
 }
 
-#right-nav div{
+#bottom-box{
     margin-top: 20px;
     
     margin-bottom: 10px;
     border-right: 1px solid #C7C7C7;
     border-top: 1px solid #C7C7C7;
     border-bottom: 1px solid #C7C7C7;
-    border-left: 5px solid #73000A;
+    border-left: 4px solid #73000A;
+}
+#b1{
+    margin-top: 20px;
+    
+    margin-bottom: 10px;
+    border-right: 1px solid #C7C7C7;
+    border-top: 1px solid #C7C7C7;
+    border-bottom: 1px solid #C7C7C7;
+    border-left: 4px solid #73000A;
+}
+
+
+#right-nav #b2 div{
+    margin: 0;
+    border-right: 0px transparent;
+    border-top: 0px transparent;
+    border-bottom: 0px transparent;
+    border-left: 0px transparent;
 }
 
 #right-nav h4{
@@ -273,38 +298,39 @@ main.columns, footer.columns{
 
 }
 
+#b1, #b2{
+    padding-left: 5px;
+}
+
 #bottom-box{
     background-color: #ECECEC;
 }
 
 #bottom-box img{
-    max-width: 100%;
-    min-height: 100%;
+    width: 100%;
 }
 /*footer*/
-#footer{
-margin-top: 10%;
-max-width: 5000px;
 
-}
 
 #footer-title{
     background-color: #ECECEC;
 }
 
-#footer-main{
-    background-color: #ECECEC;
-}
+
 
 #footer-title li{
     display: inline;
     margin-left: 5px;
 
-    text-align: end;
     font-weight: bold;
 
 }
 
+
+#footer-title a{
+    color: black;
+    text-decoration: none; /*Remove underline */
+}
 
 #footer-title a{
     color: black;
@@ -318,12 +344,20 @@ max-width: 5000px;
     /* Remove list indent */
     /* why is a comma needed here*/
     list-style-type: none;
-    right: 0;
-    left: 0;
+    display: flex;
+    margin-top: 2%;
     justify-content: end;
 
 }
 
+.container4{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+
+
+}
 
 #footer-middle{
     background-color: #73000A;
@@ -374,6 +408,8 @@ max-width: 5000px;
 .headers-f a{
     text-decoration: none; /*Remove underline */
     color: white;
+    font-size: smaller;
+
 }
 
 
@@ -382,7 +418,6 @@ max-width: 5000px;
     margin-right: 5px;
 
     text-align: center;
-    font-size: smaller;
 
 }
 
@@ -397,26 +432,39 @@ max-width: 5000px;
 
 #footer-bottom ul /*ul*/
 {
-    /* Remove list indent */
-    /* why is a comma needed here*/
-    list-style-type: none;
+   
     background-color: #000000;
+
+    list-style-type: none;
     margin: 0%;
     right: 0;
     left: 0;
     justify-content: left;
-    border-top: 1px solid white;
     padding-inline-start: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#footer-middle li /*ul*/
+{
+   
+font-size: smaller;
+}
+
+.container3/*ul*/
+{
+    border-top: 1px solid white;
+
+   padding-left: 10%;
+   padding-right: 10%;
+
+    background-color: #000000;
+
 
 
 }
 
- 
 
-.full-bleed {
-    box-shadow: 0 0 0 100vmax red;
-    clip-path: inset(0 -100vmax); 
-  }
+
 @media only screen and (min-width: 768px) {
 
 
