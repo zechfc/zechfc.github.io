@@ -1,0 +1,117 @@
+:root {
+    --turn: 45deg;
+
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #193C40;
+    
+}
+
+/* Structure */
+#content {
+    background: #2E5902;
+    padding: 5px;
+    width: 80%;
+    margin: auto; /*Center horizontally */
+    border-radius: 5px;   
+    text-align: center;
+
+
+}
+/*
+#rotate{
+    transform: rotate(var(--turn));
+
+}
+*/
+
+.box{
+    background-color: #D96941;
+    border: 2px solid #A62B1F;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+
+}
+/* Typography */
+
+p{
+    color: #193C40;
+
+}
+h1 {
+    color: #D96941;
+    text-align: center;
+
+}
+
+h2 {
+    color: #A62B1F;
+
+}
+
+h3{
+    color: #193C40;
+    text-align: center;
+
+}
+
+/*Slider*/
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #193C40;
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+ 
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #A62B1F; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #A62B1F; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+@media only screen and (min-width: 768px) {
+    .columns{
+        display: flex;
+    }
+
+    .columns section{
+        padding: 5px 20px; /*Top and bottom padding, then left and righ padding */
+    }
+    .one{
+        flex: 2;
+    }
+
+    .columns img {
+        background-color: black;
+
+        max-width: 80%;
+        /*  for centering */
+        display: block;
+        margin: auto;
+    }
+}
