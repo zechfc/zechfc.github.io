@@ -11,7 +11,7 @@
         <div id="heading" class="columns">
             <h1 class="three">Main Heading</h1>
             <section id="signin" class="half">
-                <a href="#">
+                <a href="login.html">
                 <img src="https://place-hold.it/200x200/FFFFFF">
                 <p>Sign In</p>
                 </a>
@@ -19,20 +19,24 @@
             </section >
 
             <section id="cart-btn" class="half">
-                <a href="#" >
+                <a href="cart.html" >
                 <img src="https://place-hold.it/200x200/FFFFFF">
                 <p>cart</p>
                 </a>
             </section>
 
         </div>
+
+       <!--<button id="hamburger-btn" onclick="toggleMenu()"> Nav</button>--> 
+
+
             <nav id="main-nav">
                 <ul class="columns">
-                    <li><a href="#"><img src="https://place-hold.it/50pxx50px/000000">Home</a></li>
-                    <li><a href="#"><img src="https://place-hold.it/50pxx50px/000000">Pick Me Up</a></li>
-                    <li><a href="#"><img src="https://place-hold.it/50pxx50px/000000">Put Me Down</a></li>
-                    <li><a href="#"><img src="https://place-hold.it/50pxx50px/000000">Room Rentals</a></li>
-                    <li><a href="#"><img src="https://place-hold.it/50pxx50px/000000">About Us</a></li>
+                    <li><a href="index.html"><img src="https://place-hold.it/50pxx50px/000000">Home</a></li>
+                    <li><a href="up.html"><img src="https://place-hold.it/50pxx50px/000000">Pick Me Up</a></li>
+                    <li><a href="down.html"><img src="https://place-hold.it/50pxx50px/000000">Put Me Down</a></li>
+                    <li><a href="roomRental.html"><img src="https://place-hold.it/50pxx50px/000000">Room Rentals</a></li>
+                    <li><a href="aboutUs.html"><img src="https://place-hold.it/50pxx50px/000000">About Us</a></li>
                 </ul>
             </nav>
         <div id="subheader">
@@ -45,43 +49,7 @@
         <p id="nite" class="one">Nite</p>
 
         </div>
-        <!--all of the popup credit goes to https://www.youtube.com/watch?v=5BeM3-_8788&ab_channel=Codingflag-->
-        <div id="login" class="popup">
-            <div class="close-btn">&times;</div>
-            <div class="form">
-                <h2>log in</h2>
-                <div class="form-elements"></div>
-                    <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Enter email">
-                <div class="form-elements"></div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter password">
-                <div class="form-elements">
-                    <button> Sign in</button>
-
-                </div>
-            </div>
-        </div>
-        <div id="cart" class="popup">
-            <div class="close-btn">&times;</div>
-            <div class="form">
-                <h2>Chart</h2>
-
-                <ul>
-                    <li>Food</li>
-                    <li>Food</li>
-                    <li>Bev</li>
-                    <li>Bev</li>
-                    <li>Total</li>
-
-                </ul>
-            </div>
-
-                <div class="form-elements">
-                    <button> Check Out</button>
-
-                </div>
-            </div>
+        
         
         
         
@@ -99,7 +67,7 @@
                     <button id="btn-day">Pick Me Up!</button>    
                     </div>
                     <div id="daypic" > 
-                        <img src="https://place-hold.it/200x200/FFFF00">
+                        <img id="pic1" onmouseenter="fade()" onmouseleave="show()"src="https://place-hold.it/200x200/FFFF00">
                     </div>
             </section>
 
@@ -117,10 +85,10 @@
                     <p>Leo integer malesuada nunc vel risus commodo viverra. Mi proin sed libero enim sed faucibus turpis. Ornare arcu odio ut sem nulla pharetra. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Sagittis vitae et leo duis ut diam quam nulla porttitor. A arcu cursus vitae congue mauris. Donec ac odio tempor orci dapibus. Est sit amet facilisis magna etiam tempor orci. Cursus mattis molestie a iaculis at. Tortor consequat id porta nibh.</p>
 
                     <div class="button">
-                    <button id="btn-night">Pick Me Up!</button>    
+                    <button id="btn-night">Put Me Down!</button>    
                     </div>
                     <div id="nightpic" > 
-                        <img src="https://place-hold.it/200x200/0D0D3E">
+                        <img id="pic2" onmouseenter="fade2()" onmouseleave="show2()"src="https://place-hold.it/200x200/0D0D3E">
                     </div>
             </section>
         </div>

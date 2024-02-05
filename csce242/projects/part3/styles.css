@@ -1,9 +1,11 @@
 :root {
     --cover: 0;
-    --cover-pop: 50;
-    --cover-pop: 50;
+    --cover-pop: -1;
+    --cover-pop: -1;
 
-    --show: none;
+    --show1: show;
+    --show2: show;
+
 
     --background-color: white;
     --border-color:black;
@@ -54,12 +56,18 @@ margin: 5px;
     height: auto; /* Maintain the aspect ratio */
 }
 
-#heading h1 {
+#heading h1{
     display: inline-flex;
     justify-content:center;
     align-items: center;
     position: sticky;
     left: 200px;
+
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+
 }
 #main-nav li{
 
@@ -85,8 +93,21 @@ nav{
     font-size: 25px;
 
 }
+#RRsubheader{
+    margin-top: .5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
+    font-size: 25px;
 
+}
 #subheader p{
+    margin-top: .5%;
+    margin-left: 1%;
+    margin-right: 1%;
+
+}
+#RRsubheader p{
     margin-top: .5%;
     margin-left: 1%;
     margin-right: 1%;
@@ -185,18 +206,31 @@ nav img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: var(--show1);
     }
 
 #nightpic img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: var(--show2);
         }
 
-.hidden{
-    display: none;
 
-}
+#dusk img{
+    margin: auto;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    }
+
+#dawn img{
+        padding: auto;
+
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+        }
 
 .button{
     text-align: center;
@@ -207,13 +241,12 @@ nav img{
     padding: 5%;
     box-sizing: border-box;
     position: absolute;
-    top: 50%;
+    top: 75%;
     left:50%;
     transform: translate(-50%, -50%);
     width: auto;
     border: 2px solid var(--border-color);
-    z-index: var(--cover-pop); /* Move the image behind the content */
-    display: var(--show);
+    /*z-index: var(--cover-pop); /* Move the image behind the content */
 
 
 }
@@ -225,7 +258,43 @@ nav img{
     
 }
 
+#Founder{
+max-width: max-content;
+margin-right: 2%;
 
+}
+
+#drinks, #food{
+    max-width: max-content;
+    
+    }
+#center{
+    display: flex;
+   
+    padding-left: 28%;
+    align-items: center;
+
+}
+.order{
+    width: 100%;
+
+}
+
+.fcontent p{
+    font-size: larger;
+    font-weight: bold;
+}
+
+#heading section{
+    justify-content: end;
+}
+#main-nav{
+    display: none;
+}
+
+.show-menu{
+    display: block;
+}
 /* For larger resoultions */
 @media only screen and (min-width: 600px) {
     .columns{
@@ -234,8 +303,13 @@ nav img{
         padding: 15px 25px;
 
     }
-
- 
+    #main-nav{
+        display: block;
+    }
+    
+    .show-menu{
+        display: none;
+    }
     .one
     {
         flex: 1;
@@ -258,10 +332,8 @@ nav img{
     {
         flex: .5;
     }
-    .full
-    {
-        flex: 100%;
-    }
+  
+ 
 }
 
 
