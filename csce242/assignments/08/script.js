@@ -8,8 +8,9 @@ const showHideNav = () => {
 };
 
 const swap = () => {
-    let input = document.getElementById("exercise").value;
-
+    let temp = document.getElementById("exercise").value;
+    let last=temp.length;
+    let input = temp.substring(last-1, last);
     if(input =="b"){
      //   console.log(input);
 
