@@ -288,13 +288,7 @@ margin-right: 2%;
 #heading section{
     justify-content: end;
 }
-#main-nav{
-    display: none;
-}
 
-.show-menu{
-    display: block;
-}
 /* For larger resoultions */
 @media only screen and (min-width: 600px) {
     .columns{

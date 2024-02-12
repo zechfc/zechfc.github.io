@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <style>
+        canvas {
+            background-color: black;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>
+        // Get the canvas element and its context
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Define constants
+        const WIDTH = canvas.width;
+        const HEIGHT = canvas.height;
+        const BALL_RADIUS = 10;
+        const PADDLE_WIDTH = 10;
+        const PADDLE_HEIGHT = 100;
+        const PADDLE_SPEED = 5;
+        const BALL_SPEED_X = 5;
+        const BALL_SPEED_Y = 5;
+
+        // Initialize variables
+        let playerScore = 0;
+        let opponentScore = 0;
+        let playerPaddle = { x: 50, y: HEIGHT / 2 - PADDLE_HEIGHT / 2 };
+        let opponentPaddle = { x: WIDTH - 50 - PADDLE_WIDTH, y: HEIGHT / 2 - PADDLE_HEIGHT / 2 };
+        let ball = { x: WIDTH / 2, y: HEIGHT / 2, speedX: BALL_SPEED_X, speedY: BALL_SPEED_Y };
+
+        // Function to draw paddles, ball, and scores
+        function draw() {
+            // Clear canvas
+            ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+            // Draw player paddle
+            ctx.fillStyle = 'white';
+            ctx.fillRect(playerPaddle.x, playerPaddle.y, PADDLE_WIDTH, PADDLE_HEIGHT);
+
+            // Draw opponent paddle
+            ctx.fillRect(opponentPaddle.x, opponentPaddle.y, PADDLE_WIDTH, PADDLE_HEIGHT);
+
+            // Draw ball
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, BALL_RADIUS, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Draw scores
+            ctx.font = '36px Arial';
+            ctx.fillText(`Player: ${playerScore}`, 50, 50);
+            ctx.fillText(`Opponent: ${opponentScore}`, WIDTH - 250, 50);
+        }
+
+        // Function to update game state
+        function update() {
+            // Move ball
+            ball.x += ball.speedX;
+            ball.y += ball.speedY;
+
+            // Bounce ball off top and bottom walls
+            if (ball.y <= 0 || ball.y >= HEIGHT) {
+                ball.speedY = -ball.speedY;
+            }
+
+            // Check if ball hits player paddle
+            if (ball.x <= playerPaddle.x + PADDLE_WIDTH && ball.y >= playerPaddle.y && ball.y <= playerPaddle.y + PADDLE_HEIGHT) {
+                ball.speedX = -ball.speedX;
+            }
+
+            // Check if ball hits opponent paddle
+            if (ball.x >= opponentPaddle.x && ball.y >= opponentPaddle.y && ball.y <= opponentPaddle.y + PADDLE_HEIGHT) {
+                ball.speedX = -ball.speedX;
+            }
+
+            // Check if ball goes out of bounds
+            if (ball.x <= 0) {
+                opponentScore++;
+                resetBall();
+            } else if (ball.x >= WIDTH) {
+                playerScore++;
+                resetBall();
+            }
+        }
+
+        // Function to reset the ball position
+        function resetBall() {
+            ball.x = WIDTH / 2;
+            ball.y = HEIGHT / 2;
+            ball.speedX = BALL_SPEED_X * (Math.random() > 0.5 ? 1 : -1);
+            ball.speedY = BALL_SPEED_Y * (Math.random() > 0.5 ? 1 : -1);
+        }
+
+        // Function to handle player input
+        function handleInput() {
+            // Move player paddle up
+            if (keysPressed['ArrowUp'] && playerPaddle.y > 0) {
+                playerPaddle.y -= PADDLE_SPEED;
+            }
+            // Move player paddle down
+            if (keysPressed['ArrowDown'] && playerPaddle.y < HEIGHT - PADDLE_HEIGHT) {
+                playerPaddle.y += PADDLE_SPEED;
+            }
+        }
+
+        // Main game loop
+        function gameLoop() {
+            handleInput();
+            update();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Event listener for key presses
+        const keysPressed = {};
+        window.addEventListener('keydown', (e) => {
+            keysPressed[e.key] = true;
+        });
+        window.addEventListener('keyup', (e) => {
+            delete keysPressed[e.key];
+        });
+
+        // Start the game loop
+        gameLoop();
+    </script>
+</body>
+</html>
