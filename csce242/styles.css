@@ -118,6 +118,13 @@ p{
 
 }
 
+#center img{
+    width: 500px;
+    height: 500px;
+}
+#center {
+   text-align: center;
+}
 /* For larger resoultions */
 @media only screen and (min-width: 600px) {
     .columns{
