@@ -249,24 +249,45 @@ nav img{
 
 .popup{
     background-color: var(--popup-color);
-    padding: 5%;
     box-sizing: border-box;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left:50%;
     transform: translate(-50%, -50%);
     width: auto;
+    padding: 10%;
     border: 2px solid var(--border-color);
     /*z-index: var(--cover-pop); /* Move the image behind the content */
 
 
 }
+.popup #cart{
+    background-color: var(--popup-color);
+    box-sizing: border-box;
+    position: absolute;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 600px;
+    border: 2px solid var(--border-color);
+    /*z-index: var(--cover-pop); /* Move the image behind the content */
 
+
+}
 .popup li {
         /* Remove list indent */
         padding-inline-start: 0px;
         list-style-type: none;
     
+}
+
+#cart{
+    width: 100px;
+    height:100px;
+    font-size: larger;
+    padding: 10%;
+
 }
 
 #Founder{

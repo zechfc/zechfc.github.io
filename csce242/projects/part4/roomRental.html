@@ -8,22 +8,25 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div id="heading" class="columns">
-            <h1 class="three">Main Heading</h1>
-            <a href="login.html"> 
-                <section id="signin" class="half">
+        <div id="heading" class="columns ">
+            <div class="align one">
+            <h1 >Main Heading</h1>
+        </div>
+
+                <section id="signin" >
+                <a href="login.html"> 
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/PICOL_icon_Login.svg">
                 <p>Sign In</p>                
-            </section >
             </a>
 
-        <a href="cart.html" >
-            <section id="cart-btn" class="half">
+            </section >
+
+            <section id="cart-btn" >
+                <a href="cart.html" >
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Antu_amarok_cart_view.svg">
                 <p>cart</p>
+            </a>
             </section>
-        </a>
-
         </div>
 
        <!--<button id="hamburger-btn" onclick="toggleMenu()"> Nav</button>--> 
@@ -65,11 +68,14 @@
                 <section id="daycontent" class="one">  
 
                 
-                    <div id="dusk"> 
+                    <div id="dawn"> 
                         <img src="images/dawnroom.png">
                     </div>
                     <p>The dawn room rentals are meant for those trying to be productive and get some work done. It comes with a modern desktop computer. We also include a docking station if you wish to plug in your own devices. The day happy hour applies when this room is rented from 5am-6pm, and any food order from the room has an additional discount as well.</p>
-            </section>
+                    <div class="button">
+                        <button id="btn-dawn">Rent Dawn</button>    
+                        </div> 
+          </section>
 
          
             <section id="line">
@@ -77,11 +83,14 @@
             </section>
             <section id="nightcontent" class="one">  
 
-                    <div id="dawn" > 
+                    <div id="dusk" > 
                         <img src="images/duskroom.png">
                     </div>
                     <p>The dusk room rentals are meant for those trying to wind down and relax. It comes with a comfortable bed as well as a temporary change of clothes. We also include built-in speakers for those that want to plug in a play ambient music such as white noise. The Nite happy hour applies when this room is rented from 6pm-5am, and any food order from the room has an additional discount as well.</p>
-            </section>
+                    <div class="button">
+                        <button id="btn-dusk">Rent Dusk</button>    
+                        </div>
+                </section>
         </div>
 
         <script src="script.js"></script>
