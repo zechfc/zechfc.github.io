@@ -6,6 +6,8 @@
     --show1: show;
     --show2: show;
 
+    --top1: 500px;
+    --top2: 700px;
 
     --background-color: #D98A29;
     --border-color:#401201;
@@ -247,11 +249,11 @@ nav img{
     text-align: center;
 }
 
-.popup{
+.popup #login{
     background-color: var(--popup-color);
     box-sizing: border-box;
     position: absolute;
-    top: 60%;
+    top: var(--top1);
     left:50%;
     transform: translate(-50%, -50%);
     width: auto;
@@ -265,7 +267,7 @@ nav img{
     background-color: var(--popup-color);
     box-sizing: border-box;
     position: absolute;
-    top: 60%;
+    top: var(--top2);
     left:50%;
     transform: translate(-50%, -50%);
     width: 500px;
@@ -398,7 +400,20 @@ footer{
         display: flex;
 
     }
-
+    .popup #cart{
+        background-color: var(--popup-color);
+        box-sizing: border-box;
+        position: absolute;
+        top: 60%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 600px;
+        border: 2px solid var(--border-color);
+        /*z-index: var(--cover-pop); /* Move the image behind the content */
+    
+    
+    }
     .two
     {
         flex: 2;

@@ -1,6 +1,20 @@
 //Javascript for later
 const showHideNav = () => {
-    document.getElementById("nav-items").classList.toggle("hide-small");
+    const root = document.querySelector(":root");
+        //root.style.setProperty("--ball-color", color); changes all the circles color
+    if(document.getElementById("nav-items").classList.toggle("hide-small"))
+        {
+            root.style.setProperty("--top1", "500px");
+            root.style.setProperty("--top2", "800px");
+        }
+    else
+    {
+      
+            root.style.setProperty("--top1", "800px");
+            root.style.setProperty("--top2", "900px");
+    }
+   
+
 
 
 };
