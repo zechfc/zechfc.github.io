@@ -132,6 +132,7 @@ p{
         display: flex;
         flex-direction: row;
         padding: 15px 25px;
+        flex-wrap: wrap;
 
     }
 

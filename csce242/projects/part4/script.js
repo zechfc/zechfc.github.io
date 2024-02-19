@@ -1,4 +1,3 @@
-//Javascript for later
 const showHideNav = () => {
     const root = document.querySelector(":root");
         //root.style.setProperty("--ball-color", color); changes all the circles color
@@ -30,6 +29,7 @@ const cart = () => {
   
 };
 const Order = () => {
+    
     alert("added to order");  
 };
 
@@ -59,7 +59,23 @@ const pickmeup = () => {
 //document.getElementById("pic2").onmouseleave = show2;
 
 
-document.getElementById("hamburger").onclick = showHideNav;
-document.getElementById("btn-day").onclick = pickmeup;
-document.getElementById("btn-night").onclick = putmedown;
-document.querySelector("order").onclick = Order;
+if(document.getElementById("btn-day"))
+{
+    document.getElementById("btn-day").onclick = pickmeup;
+}
+
+if(document.querySelector("order"))
+{
+    document.querySelector("order").onclick = Order;
+}
+
+if(document.getElementById("hamburger"))
+{
+    document.getElementById("hamburger").onclick = showHideNav;
+}
+
+if(document.getElementById("btn-night"))
+{
+    document.getElementById("btn-night").onclick = putmedown;
+}
+

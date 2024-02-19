@@ -404,7 +404,7 @@ footer{
         background-color: var(--popup-color);
         box-sizing: border-box;
         position: absolute;
-        top: 60%;
+        top: 100%;
         left:50%;
         transform: translate(-50%, -50%);
         width: 500px;
