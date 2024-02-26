@@ -42,6 +42,9 @@ body{
 
 }
 
+.nav {
+    text-align: center;
+}
 
 
 /* not needed right now
@@ -146,7 +149,7 @@ p{
     {
         flex: 1;
     }
-
+  
 
    
    
