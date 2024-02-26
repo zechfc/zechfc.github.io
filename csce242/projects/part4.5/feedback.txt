@@ -1,0 +1,7 @@
+Hide and display attributions
+Fix cart Size 
+Order Javascript fix error 
+Fix null error
+Require type for email in login 
+Add more so put me down and pick me up do not look so empty
+
