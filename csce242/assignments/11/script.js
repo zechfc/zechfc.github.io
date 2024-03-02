@@ -148,7 +148,7 @@ class Tree {
 const Trees = [];
 Trees.push(new Tree("Oak Tree", "Fast Growth",20, 50,"oak.jpg","One of the most common trees in the USA, and a major source of wood."));
 Trees.push(new Tree("Pine Tree", "Fast Growth",15, 150,"pine.jpg","Famous for their needle like leaves, child often enjoy throw and kicking around the trees pine cones."));
-Trees.push(new Tree("Cherry Blossom Tree","Moderate Growth",20, 60, "cherry.JPG","Very popular tree due to its vibrate colors, there are many festivals with this tree as the main focus."));
+Trees.push(new Tree("Cherry Blossom Tree","Moderate Growth",20, 60, "pine.jpg","Very popular tree due to its vibrate colors, there are many festivals with this tree as the main focus."));
 Trees.push(new Tree("Redwood Tree","Slow Growth", 40, 200,"redwood.jpg","The redwood tree can leave for centuries and go grow to insane heights."));
 
 
