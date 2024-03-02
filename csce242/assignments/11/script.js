@@ -21,7 +21,6 @@ class Tree {
 
         const h1 = document.createElement("h1");
         h1.innerHTML = this.title;
-        section.append(h1);
 
 
         const columns = document.createElement("section");
@@ -35,6 +34,8 @@ class Tree {
         columns.append(imageSection);
         const image = document.createElement("img");
         image.src ="images/" + this.picture;
+        imageSection.append(h1);
+
         imageSection.append(image);
 
 
@@ -42,10 +43,7 @@ class Tree {
 
         return section;
     }
-        paragraph(title, info){
-            const p = document.createElement("p");
-            return p;
-        }
+  
 
 
 
@@ -109,10 +107,10 @@ class Tree {
         
                 h1.innerHTML = Subject.title;
                 detailsSection.append(h1);
-                detailsSection.append(this.paragraph("Growth Rate", this.type));
-                detailsSection.append(this.paragraph("Height", this.height));
-                detailsSection.append(this.paragraph("Lifespan", this.lifespan));
-                detailsSection.append(this.description);
+                detailsSection.append(this.paragraph("Growth Rate", Subject.type));
+                detailsSection.append(this.paragraph("Height", Subject.height));
+                detailsSection.append(this.paragraph("Lifespan", Subject.lifespan));
+                detailsSection.append(this.desc(Subject.description));
                 
             };
             
@@ -132,6 +130,12 @@ class Tree {
         p.innerHTML = `<strong>${title}:</strong> ${info}`;
         return p;
     }
+    desc(info){
+        const p = document.createElement("p");
+        p.innerHTML = `${info}`;
+        p.classList.add("description");
+        return p;
+    }
 
     };
 
@@ -142,10 +146,10 @@ class Tree {
 
 
 const Trees = [];
-Trees.push(new Tree("Oak Tree", "Fast Growth",20, 50,"oak.jpg","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."));
-Trees.push(new Tree("Pine Tree", "Fast Growth",15, 150,"pine.jpg","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."));
-Trees.push(new Tree("Cherry Blossom Tree","Moderate Growth",20, 60, "cherry.jpg","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."));
-Trees.push(new Tree("Redwood Tree","Slow Growth", 40, 200,"redwood.jpg","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."));
+Trees.push(new Tree("Oak Tree", "Fast Growth",20, 50,"oak.jpg","One of the most common trees in the USA, and a major source of wood."));
+Trees.push(new Tree("Pine Tree", "Fast Growth",15, 150,"pine.jpg","Famous for their needle like leaves, child often enjoy throw and kicking around the trees pine cones."));
+Trees.push(new Tree("Cherry Blossom Tree","Moderate Growth",20, 60, "cherry.jpg","Very popular tree due to its vibrate colors, there are many festivals with this tree as the main focus."));
+Trees.push(new Tree("Redwood Tree","Slow Growth", 40, 200,"redwood.jpg","The redwood tree can leave for centuries and go grow to insane heights."));
 
 
 

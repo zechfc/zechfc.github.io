@@ -3,36 +3,62 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #223240;
+  background: #2F3273;
   text-align: center;
 }
 
 img{
-  width: 300px;
+  width: 350px;
   height: 400px;
 }
 /* Structure */
 
 
-.tree {
-  background-color: green;
-  width:80%;
-
-  
+.tree section  {
+  margin: auto; 
 
 }
 
 .tree h1 section{
   margin-left: 0px;
   margin-right: 0px;
+  text-align: center;
 
 }
 
+#tree-list {
+  text-align: center;
 
-#tree-list section{
-  padding: 0px;
-  margin: 10px;
-  width: 100%;
+
+}
+
+h2{
+  color: #F28F16;
+}
+#tree-list img{
+  background-color: #72A689;
+  padding: 10%;
+  margin : 0%;
+  margin-bottom: 5%;
+
+
+
+}
+
+#tree-list h1{
+  text-align: center;
+
+  background-color: #72A689;
+  padding: 0%;
+  margin: 0%;
+
+}
+
+#tree-list section section{
+  text-align: center;
+  margin: auto; 
+
+
 
 
   flex-direction: row;
@@ -41,7 +67,7 @@ img{
 
 
 h1 {
-  color: #f27d52;
+  color:#F23322;
 }
 
 h3 {
@@ -49,7 +75,7 @@ h3 {
 }
 
 p {
-  color: #223240;
+  color: #F28F16;
   font-size: xx-large;
 }
 
@@ -57,7 +83,7 @@ p {
 
 #dialog-details {
   padding: 10px;
-  background: white;
+  background: #206A73;
   margin: 10px;
 }
 
