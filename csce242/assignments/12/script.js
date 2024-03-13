@@ -15,46 +15,102 @@ const showHouses = async () => {
     const houses = await getHouses();
 
     houses.forEach((house) => {
-        const allBsSection = document.getElementById("houses-section");
+        const allHousesSection = document.getElementById("houses-section");
         const houseSection = document.createElement("section");
-        allBsSection.append(houseSection);
+        allHousesSection.append(houseSection);
 
-        houseSection.classList.add("brewery");
+        houseSection.classList.add("house");
 
-        const h3 = document.createElement("h3");
+        const h2 = document.createElement("h2");
         const img = document.createElement("img");
+       
+        img.src =  "https://portiaportia.github.io/json/images/house-plans/"+house.main_image;
+        h2.innerHTML = house.name;
 
-        h3.innerHTML = house.name;
-        houseSection.append(h3);
+        const paragraph = (title, info, extra) => {
+            const p = document.createElement("p");
+            p.innerHTML = `<strong>${title}:</strong> ${info} ${extra}`;
+            return p;
+        }
 
-        
-        houseSection.append(this.paragraph("Size:", house.size));
-        houseSection.append(this.paragraph("Bedrooms:", house.bedroom));
-        houseSection.append(this.paragraph("Bathrooms:", house.bathrooms));
+        const title = document.createElement("section");
+        title.append(h2);
+        title.classList.add("columns");
+        title.classList.add("title");
 
+
+
+        const content = document.createElement("section");
+        const imageHouse = document.createElement("section");
+        const desc = document.createElement("section");
+
+        imageHouse.append(img);
+        imageHouse.classList.add("one");
+        imageHouse.classList.add("house-img");
+
+        content.append(imageHouse);
+
+
+        desc.append(paragraph("Size", house.size, " Square Feet"));
+        desc.append(paragraph("Bedrooms", house.bedrooms, ""));
+        desc.append(paragraph("Bathrooms", house.bathrooms, ""));
         const p = document.createElement("p");
+       /*
+        const temp = house.features;
+        console.log(temp);
+        temp.replace(",", "*")
+        console.log(temp);
+        */
         p.innerHTML = house.features;
-        houseSection.append(p);
+        desc.append(p);
+        desc.classList.add("three");
+        desc.classList.add("desc");
+
+        content.append(desc);
+        content.classList.add("columns");
+
+
+        const bluePrints = document.createElement("section");
+        bluePrints.classList.add("columns");
+
+
+
+        houseSection.append(title);
+        houseSection.append(content);
+        
+       
 
         house.floor_plans.forEach((floor_plan) => {
 
-        h3.innerHTML = floor_plan.name;
-        houseSection.append(h3);
+        const h2B = document.createElement("h2");
+        const imgB = document.createElement("img");
+        const print = document.createElement("section");
 
-        img.src = brewery.website_url;
-        brewerySection.append(a);
+
+        h2B.innerHTML = floor_plan.name;
+        imgB.src =  "https://portiaportia.github.io/json/images/house-plans/"+floor_plan.image;
+
+
+        print.append(h2B);
+        print.append(imgB);
+       
+        print.classList.add("one");
+
+        bluePrints.append(print);
+        bluePrints.classList.add("blueprints");
+
+
+
         });
-     
 
+        houseSection.append(bluePrints);
+
+     
 
       
     });
 
-    paragraph(title, info){
-        const p = document.createElement("p");
-        p.innerHTML = `<strong>${title}:</strong> ${info}`;
-        return p;
-    }
+   
 
 };
 
