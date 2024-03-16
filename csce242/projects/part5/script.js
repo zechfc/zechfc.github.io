@@ -18,37 +18,68 @@ const showHideNav = () => {
 
 };
 
-const slideForward = () => {
+const slideForwardFood = () => {
     //at the end of the list of images
-    if(getCurrentImage().nextElementSibling == null)
+    if(getCurrentImageFood().nextElementSibling == null)
     {
         slide(document.querySelector("#preview img"));
     }
     else
     {
-        slide(getCurrentImage().nextElementSibling);
+        slide(getCurrentImageFood().nextElementSibling);
     }
 };
 
-const slideBackward = () => {
-    if(getCurrentImage().previousElementSibling == null)
+const slideBackwardFood = () => {
+    if(getCurrentImageFood().previousElementSibling == null)
     {
         slide(document.querySelector("#preview :last-child"));
     }
     else
     {
-        slide(getCurrentImage().previousElementSibling);
+        slide(getCurrentImageFood().previousElementSibling);
     }};
+
+const slideForwardDrink = () => {
+    //at the end of the list of images
+    if(getCurrentImageDrink().nextElementSibling == null)
+    {
+        slide(document.querySelector("#preview img"));
+    }
+    else
+    {
+        slide(getCurrentImageDrink().nextElementSibling);
+    }
+};
+
+const slideBackwardDrink = () => {
+    if(getCurrentImageFood().previousElementSibling == null)
+    {
+        slide(document.querySelector("#preview :last-child"));
+    }
+    else
+    {
+        slide(getCurrentImageFood().previousElementSibling);
+    }};    
 
 const slide = (nextImage) => {
     getCurrentImage().classList.add("hide");
     nextImage.classList.remove("hide");
 };
 
+const slide = (nextImage) => {
+    getCurrentImage().classList.add("hide");
+    nextImage.classList.remove("hide");
+};
+
+
 const getCurrentImage = () => {
     return document.querySelector("#preview :not(.hide)")
 };
 
+const getCurrentImage = () => {
+    return document.querySelector("#preview :not(.hide)")
+};
 
 const signin = () =>{
     const root = document.querySelector(":root");
@@ -138,8 +169,12 @@ if(document.getElementById("btn-attributions"))
 }
 
 
-document.getElementById("forward-arrow").onclick = slideForward;
-document.getElementById("backward-arrow").onclick = slideBackward;
+document.getElementById("forward-arrow-drink").onclick = slideForwardDrink;
+document.getElementById("backward-arrow-drink").onclick = slideBackwardDrink;
+
+
+document.getElementById("forward-arrow-food").onclick = slideForwardFood;
+document.getElementById("backward-arrow-food").onclick = slideBackwardFood;
 
 document.querySelectorAll("#thumbs img").forEach((img, index) => {
     img.onclick = () => {

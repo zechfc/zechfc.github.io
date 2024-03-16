@@ -203,7 +203,6 @@ nav img{
 
   }
 
-  
   td{
     background-color: #C6985F;
     height: 400px;
@@ -216,6 +215,7 @@ nav img{
   table {
     color: var(--text-color);
     border-collapse: collapse;  
+    justify-content:stretch;
     align-items:center;
     text-align: center;
 
