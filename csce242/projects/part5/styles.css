@@ -199,18 +199,25 @@ nav img{
 }
  th{
     background-color: #7E7339;
-    margin: 0%;
+    width: 450px;
 
   }
 
+  
   td{
     background-color: #C6985F;
-
+    height: 400px;
+    width: max-content;
+    margin-left: 5%;
 }
+
+
 
   table {
     color: var(--text-color);
     border-collapse: collapse;  
+    align-items:center;
+    text-align: center;
 
 
 
@@ -218,7 +225,20 @@ nav img{
 
 table p{
     margin: 0;
+    text-align:left;
+    padding-bottom: 2%;
+
 }
+table ul{
+    margin: 0;
+    text-align:left;
+
+}
+
+td:nth-child(2){
+    width: 1000px;
+}
+
 
 .Menu{
     justify-content:  space-between;;
@@ -350,16 +370,11 @@ margin-right: 2%;
 
 }
 .drinksContainer{
-    margin-left: 5%;
 }
 
 .foodContainer{
-    margin-right: 5%;
 }
-#drinks, #food{
-    max-width: max-content;
-    
-    }
+
 #center{
     display: flex;
    text-align: center;
@@ -475,6 +490,32 @@ button{
 .info-section{
     text-align: center;
 }
+
+#forward-arrow {
+ 
+    font-size: 3em;
+    padding-top: 300%;
+    padding-left: 20%;
+    padding-right: 20%;
+
+  }
+  
+  #backward-arrow {
+
+    font-size: 3em;
+    padding-top: 300%;
+    padding-right: 10%;
+  }
+
+  #thumbs{
+    text-align: center;
+   
+  }
+
+  #thumbs img{
+    height: 60px;
+    width: 50px;
+  }
 /* For larger resoultions */
 @media only screen and (min-width: 600px) {
     .columns{
@@ -532,7 +573,12 @@ button{
         flex: 50%;
     }
   
- 
+   td{
+    background-color: #C6985F;
+    height: 0px;
+    width: max-content;
+    margin-left: 5%;
+}
 }
 
 

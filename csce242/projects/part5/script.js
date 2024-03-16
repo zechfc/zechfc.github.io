@@ -18,6 +18,38 @@ const showHideNav = () => {
 
 };
 
+const slideForward = () => {
+    //at the end of the list of images
+    if(getCurrentImage().nextElementSibling == null)
+    {
+        slide(document.querySelector("#preview img"));
+    }
+    else
+    {
+        slide(getCurrentImage().nextElementSibling);
+    }
+};
+
+const slideBackward = () => {
+    if(getCurrentImage().previousElementSibling == null)
+    {
+        slide(document.querySelector("#preview :last-child"));
+    }
+    else
+    {
+        slide(getCurrentImage().previousElementSibling);
+    }};
+
+const slide = (nextImage) => {
+    getCurrentImage().classList.add("hide");
+    nextImage.classList.remove("hide");
+};
+
+const getCurrentImage = () => {
+    return document.querySelector("#preview :not(.hide)")
+};
+
+
 const signin = () =>{
     const root = document.querySelector(":root");
     root.style.setProperty("--square-top", pos + "px");
@@ -105,3 +137,12 @@ if(document.getElementById("btn-attributions"))
     document.getElementById("btn-attributions").onclick = attributions;
 }
 
+
+document.getElementById("forward-arrow").onclick = slideForward;
+document.getElementById("backward-arrow").onclick = slideBackward;
+
+document.querySelectorAll("#thumbs img").forEach((img, index) => {
+    img.onclick = () => {
+        slide(document.querySelector(`#preview :nth-child(${index+1})`));
+    };
+});
