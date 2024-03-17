@@ -188,13 +188,16 @@ const FeaturedDay = async (item) => {
     
     const allMenusSection = document.getElementById("dawnmenu");
     const drinksContainer = document.createElement("div");
+    const foodContainer = document.createElement("div");
 
+    allMenusSection.append(drinksContainer);
 
 
     drinksContainer.classList.add("two");
     drinksContainer.classList.add("drinksContainer");
 
-
+    foodContainer.classList.add("two");
+    foodContainer.classList.add("foodContainer");
 
     
         const featuredItem = document.createElement("table");
@@ -324,6 +327,7 @@ const FeaturedDay = async (item) => {
         logoImg.src =  "images/sun.png";
 
         logo.append(logoImg);
+        allMenusSection.append(logo);
     
 
 
@@ -435,6 +439,7 @@ const FeaturedDay = async (item) => {
                 drinkItem.append(drinkContent);
     
     
+            drinksContainer.append(drinkItem);
     
         };
     
@@ -444,6 +449,7 @@ const FeaturedDay = async (item) => {
             const allMenusSection = document.getElementById("dawnmenu");
             const foodContainer = document.createElement("div");
         
+            allMenusSection.append(foodContainer);
         
         
             foodContainer.classList.add("two");
@@ -646,6 +652,7 @@ const FeaturedDay = async (item) => {
                         foodItem.append(foodContent);
             
             
+                    foodContainer.append(foodItem);
             
                 };
         
@@ -657,6 +664,7 @@ const FeaturedDay = async (item) => {
                 
                 const allMenusSection = document.getElementById("duskmenu");
                 const drinksContainer = document.createElement("div");
+                const foodContainer = document.createElement("div");
             
                 allMenusSection.append(drinksContainer);
             
@@ -664,7 +672,9 @@ const FeaturedDay = async (item) => {
                 drinksContainer.classList.add("two");
                 drinksContainer.classList.add("drinksContainer");
             
-               
+                foodContainer.classList.add("two");
+                foodContainer.classList.add("foodContainer");
+            
                 
                     const featuredItem = document.createElement("table");
                     featuredItem.classList.add("top");

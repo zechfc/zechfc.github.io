@@ -89,7 +89,7 @@
     "menu":"dusk",
     "feature":false,
     "img": "images/oatmeal.jpg",
-    "description": "The cherry on top right before sleep",
+    "description": "Something smooth to put you in a sleepy mood",
     "prices":["5.00","3.50","2.00"],
     "amt":[12,9,6],
     "ingredients": ["Sugar", "Chocolate Chips", "Butter", "Oatmeal"]
