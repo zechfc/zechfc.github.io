@@ -160,14 +160,16 @@ const getItems = async () => {
                 } else if (item.type == "Food" && item.feature == false) {
                     FoodDay(item);
                 }
-            } else if (item.menu == "dusk") {
+            } 
+            if (item.menu == "dusk") {
                 if (item.type == "Drink" && item.feature == true) {
                     FeaturedNite(item);
-                } else if (item.type == "Drink" && item.feature == false) {
+                } else if (item.type == "Drink" && item.feature === false) {
                     drinkNite(item);
-                } else if (item.type == "Food" && item.feature == true) {
+                } else if (item.type == "Food" && item.feature === true) {
                     FeaturedNiteFood(item);
-                } else if (item.type == "Food" && item.feature == false) {
+                } 
+                else if (item.type == "Food" && item.feature === false) {
                     FoodNite(item);
                 }
             }
@@ -547,12 +549,10 @@ const FeaturedDay = async (item) => {
             };
         
             const FoodDay = async (item) => {
-        
-            
-                const allMenusSection = document.getElementById("dawnmenu");
+                    
+                        
                 const foodContainer = document.getElementById("foodCont");
-                allMenusSection.append(foodContainer);
-
+              
             
                     const foodItem = document.createElement("table");
                     foodItem.classList.add("top");
@@ -643,9 +643,9 @@ const FeaturedDay = async (item) => {
                         foodItem.append(foodContent);
             
             
+                    foodContainer.append(foodItem);
             
                 };
-        
       
                 
             
@@ -654,9 +654,7 @@ const FeaturedDay = async (item) => {
                 
                 const allMenusSection = document.getElementById("duskmenu");
                 const drinksContainer = document.createElement("div");
-                const foodContainer = document.createElement("div");
             
-                allMenusSection.append(drinksContainer);
             
             
                 drinksContainer.classList.add("two");
@@ -773,6 +771,8 @@ const FeaturedDay = async (item) => {
                     drinksContainer.append(featuredItem);
                     drinksContainer.setAttribute("id","drinkCont");
             
+                    allMenusSection.append(drinksContainer);
+
                 };
             
                 const drinkNite = async (item) => {
