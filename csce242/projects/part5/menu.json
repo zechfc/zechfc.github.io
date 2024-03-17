@@ -1,0 +1,97 @@
+[{
+    "menuId":1,
+    "name":"Cup Oh Joe",
+    "type":"Drink",
+    "menu":"dawn",
+    "feature":true,
+    "img": "images/coffee.jpg",
+    "description": "A classic cup of American Joe with just a hint of love",
+    "prices":["5.00","3.50","2.00"],
+    "amt":[],
+    "ingredients": ["Milk", "Coffee", "Sugar", "Creamer"]
+},
+{
+    "menuId":2,
+    "name":"Coconut pick me up",
+    "type":"Drink",
+    "menu":"dawn",
+    "feature":false,
+    "img": "images/Coconut pick me up.jpg",
+    "description": "Something more delicate but with a surprising punch",
+    "prices":["5.00","3.50","2.00"],
+    "amt":[],
+    "ingredients": ["Lime", "Coconut", "Sugar", "Dragon Fruit"]
+},
+{
+    "menuId":3,
+    "name":"Tiny Whale",
+    "type":"Food",
+    "menu":"dawn",
+    "feature":true,
+    "img": "images/tiny whale.jpg",
+    "description": "Small enough to eat on a the go but hearty enough to be a meal",
+    "prices":["5.00","3.50","2.00"],
+    "amt":[3,2,1],
+    "ingredients": ["Eggs", "Salmon", "Tomato", "Sour Cream", " Lettuce"]
+},
+{
+    "menuId":4,
+    "name":"Strawberry Starter",
+    "type":"Food",
+    "menu":"dawn",
+    "feature":false,
+    "img": "images/Strawberry Starter.jpg",
+    "description": "Something small and sweet to help you get on your feet",
+    "prices":["5.00","3.50","2.00"],
+    "amt":[9,6,3],
+    "ingredients": ["Strawberry", "Milk", "Sugar", "Butter"]
+},
+{
+    "menuId":5,
+    "name":"Nutmeg Nap",
+    "type":"Drink",
+    "menu":"dusk",
+    "feature":true,
+    "img": "images/nutmeg.jpg",
+    "description": "A smoothie winter treat to lull you to sleep",
+    "prices":["5.00","3.50","2.00"],
+    "amt":[],
+    "ingredients": ["Milk", "Nutmeg", "Sugar", "EggNog"]
+},
+{
+    "menuId":6,
+    "name":"Cinnamon Cure",
+    "type":"Drink",
+    "menu":"dusk",
+    "feature":false,
+    "img": "images/eggnog.jpg",
+    "description": "Something smooth to put you in a sleepy mood",
+    "prices":["5.00","3.50","2.00"],
+    "amt":[],
+    "ingredients": ["Cinnamon", "Nutmeg", "Sugar", "Creamer", "Milk"]
+},
+{
+    "menuId":7,
+    "name":"Cherry Dream Pie",
+    "type":"Food",
+    "menu":"dusk",
+    "feature":true,
+    "img": "images/pie.jpg",
+    "description": "The cherry on top right before sleep",
+    "prices":["5.00","3.50","2.00"],
+    "amt":[],
+    "ingredients": ["Cinnamon", "Cherries", "Sugar", "Ice Cream", "Milk"]
+},
+{
+    "menuId":8,
+    "name":"Oatmeal Chip",
+    "type":"Food",
+    "menu":"dusk",
+    "feature":false,
+    "img": "images/oatmeal.jpg",
+    "description": "The cherry on top right before sleep",
+    "prices":["5.00","3.50","2.00"],
+    "amt":[12,9,6],
+    "ingredients": ["Sugar", "Chocolate Chips", "Butter", "Oatmeal"]
+}
+]

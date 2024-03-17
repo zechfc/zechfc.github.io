@@ -1,0 +1,133 @@
+const drinkDay = async (item) => {
+
+    
+    const allMenusSection = document.getElementById("dawnmenu");
+    const drinksContainer = document.createElement("div");
+    const logo = document.createElement("div");
+    const foodContainer = document.createElement("div");
+
+    allMenusSection.append(drinksContainer);
+    allMenusSection.append(logo);
+    allMenusSection.append(foodContainer);
+
+
+    drinksContainer.classList.add("two");
+    drinksContainer.classList.add("drinksContainer");
+
+    foodContainer.classList.add("two");
+    foodContainer.classList.add("foodContainer");
+
+    logo.classList.add("three");
+    
+    const logoImg = document.createElement("img");
+    logoImg.src =  "images/sun.png";
+
+        const drinkItem = document.createElement("table");
+        drinkItem.classList.add("top");
+        drinkItem.classList.add("drink");
+
+
+        const drinkHeader = document.createElement("tr");
+        const drinkContent = document.createElement("tr");
+
+        const drinkDrink = document.createElement("th");
+        const drinkName = document.createElement("th");
+
+        const drinkPic = document.createElement("td");
+        const drinkDesc = document.createElement("td");
+        const drinkIng = document.createElement("h3");
+        const drinkPrice = document.createElement("h3");
+
+        const drinkList = document.createElement("ul");
+        const drinkPriceList = document.createElement("ul");
+
+        const drinkDetail = document.createElement("p");
+        const drinkImg = document.createElement("img");
+
+        const button = document.createElement("button");
+        button.classList.add("order");
+        
+        const li = (prefix, info) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${prefix}</strong> -  ${info}`;
+            return li;
+        };
+
+
+        drinkItem.classList.add("drinks");
+        drinkItem.classList.add("top");
+
+        drinkDrink.innerHTML = "Drink of the Week"
+        drinkName.innerHTML= item.name;
+
+        drinkHeader.append(drinkDrink);
+        drinkHeader.append(drinkName);
+
+        drinkImg.src = item.img;
+        drinkIng.innerHTML = "Ingredients";
+        drinkPrice.innerHTML = "Price";
+        drinkDetail.innerHTML = item.description
+
+        drinkPic.append(drinkImg);
+
+        item.ingredients.forEach((ingredient) => {
+           
+            const liIng = document.createElement("li");
+            liIng.innerHTML = ingredient;
+            drinkList.append(liIng);
+        });
+
+
+        
+
+        item.prices.forEach((price) => {
+            let i = 0;
+            let size="";
+            if(i=0){
+                size="Large"
+            }
+            if(i=1){
+                size="Medium"
+            }
+            if(i=2){
+                size="Small"
+            }
+            
+                // if(item.amt != null)
+                // {
+                    
+                //     drinkPriceList.append(li(amt, price));
+                //     console.log(amt + "x");
+                //     console.log(price + "y");
+
+                // }
+                // else{
+
+                    drinkPriceList.append(li(size, price));
+                    i ++;
+                    console.log(size + i);
+
+
+                // }
+            });
+
+            drinkDesc.append(drinkIng);
+            drinkDesc.append(drinkList);
+            drinkDesc.append(drinkPrice);
+            drinkDesc.append(drinkPriceList);
+
+
+            drinkContent.append(drinkPic)
+            drinkContent.append(drinkDesc);
+            
+            drinkPriceList.classList.add("bullets");
+
+
+            drinkItem.append(drinkHeader);
+            drinkItem.append(drinkContent);
+
+
+        drinksContainer.append(drinkItem);
+        drinksContainer.append(drinkMenu);
+
+    };

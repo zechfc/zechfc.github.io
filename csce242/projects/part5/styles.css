@@ -205,8 +205,9 @@ nav img{
 
   td{
     background-color: #C6985F;
-    height: 400px;
     width: max-content;
+    height: 500px;
+
     margin-left: 5%;
 }
 
@@ -219,9 +220,12 @@ nav img{
     align-items:center;
     text-align: center;
 
-
-
 }
+
+table tr:nth-child(2)
+{
+}
+
 
 table p{
     margin: 0;
