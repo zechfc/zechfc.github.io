@@ -150,39 +150,30 @@ const getItems = async () => {
         const items = await getItems();
     
         items.forEach((item) => {
-            
-            if(item.menu == "dawn" && item.type == "Drink" && item.feature == true)
-            {
-                FeaturedDay(item);
-            }
-            else if(item.menu == "dawn" && item.type == "Drink" && item.feature == false){
-                drinkDay(item);
-            }
-            else if(item.menu == "dawn" && item.type == "Food" && item.feature == true){
-                FeaturedDayFood(item);
-            }
-            else if(item.menu == "dawn" && item.type == "Food" && item.feature == false){
-                FoodDay(item);
-            }
-            else if(item.menu == "dusk" && item.type == "Drink" && item.feature == true)
-            {
-                FeaturedNite(item);
-            }
-            else if(item.menu == "dusk" && item.type == "Drink" && item.feature == false){
-                drinkNite(item);
-            }
-            else if(item.menu == "dusk" && item.type == "Food" && item.feature == true){
-                FeaturedNiteFood(item);
-            }
-            else if(item.menu == "dusk" && item.type == "Food" && item.feature == false){
-                FoodNite(item);
+            if (item.menu == "dawn") {
+                if (item.type == "Drink" && item.feature == true) {
+                    FeaturedDay(item);
+                } else if (item.type == "Drink" && item.feature == false) {
+                    drinkDay(item);
+                } else if (item.type == "Food" && item.feature == true) {
+                    FeaturedDayFood(item);
+                } else if (item.type == "Food" && item.feature == false) {
+                    FoodDay(item);
+                }
+            } else if (item.menu == "dusk") {
+                if (item.type == "Drink" && item.feature == true) {
+                    FeaturedNite(item);
+                } else if (item.type == "Drink" && item.feature == false) {
+                    drinkNite(item);
+                } else if (item.type == "Food" && item.feature == true) {
+                    FeaturedNiteFood(item);
+                } else if (item.type == "Food" && item.feature == false) {
+                    FoodNite(item);
+                }
             }
         });
-    
     };
-
     
-
 const FeaturedDay = async (item) => {
 
     
@@ -196,8 +187,7 @@ const FeaturedDay = async (item) => {
     drinksContainer.classList.add("two");
     drinksContainer.classList.add("drinksContainer");
 
-    foodContainer.classList.add("two");
-    foodContainer.classList.add("foodContainer");
+ 
 
     
         const featuredItem = document.createElement("table");
@@ -561,7 +551,8 @@ const FeaturedDay = async (item) => {
             
                 const allMenusSection = document.getElementById("dawnmenu");
                 const foodContainer = document.getElementById("foodCont");
-              
+                allMenusSection.append(foodContainer);
+
             
                     const foodItem = document.createElement("table");
                     foodItem.classList.add("top");
@@ -652,7 +643,6 @@ const FeaturedDay = async (item) => {
                         foodItem.append(foodContent);
             
             
-                    foodContainer.append(foodItem);
             
                 };
         
@@ -672,8 +662,7 @@ const FeaturedDay = async (item) => {
                 drinksContainer.classList.add("two");
                 drinksContainer.classList.add("drinksContainer");
             
-                foodContainer.classList.add("two");
-                foodContainer.classList.add("foodContainer");
+               
             
                 
                     const featuredItem = document.createElement("table");
