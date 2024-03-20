@@ -1,0 +1,680 @@
+:root {
+    --cover: 0;
+    --cover-pop: -1;
+    --cover-pop: -1;
+
+    --show1: show;
+    --show2: show;
+
+    --top1: 500px;
+    --top2: 700px;
+
+    --background-color: #BF9075;
+    --border-color:#401201;
+    --text-color: #EBF1F2;
+    ;
+    --popup-color:#BF8563;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    padding: 0%;
+    background: #BFA380;
+
+}
+
+/* Structure */
+#heading {
+    background-image: url("images/bean.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    padding: 0;
+    text-align: center;
+    margin-right: auto;
+
+   
+}
+
+#background{
+    background-image: url("images/cute-coffee-shop-1920w.jpg");
+
+}
+#heading section {
+    gap: 5px;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom:.5%;
+
+}
+#heading p {
+margin: 5px;
+}
+
+#heading section {
+    flex: 0 0 auto; /* Don't grow or shrink, maintain the initial size */
+    text-align: center; /* Center content horizontally */
+    width: fit-content;
+    color: white;
+
+
+}
+
+
+#heading img {
+    width: 50px;
+    padding: 10px;
+    height: 50px;
+
+}
+
+#heading h1{
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    left: 4.2%;
+    color: white;
+    width: max-content;
+    
+
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+
+}
+#main-nav li{
+
+    margin: auto;
+    font-weight: bold;
+    font-size: larger;
+
+
+}
+
+#main-nav li:hover{
+    background-color: #4F3A33;
+}
+
+#main-nav img{
+
+   height: 50px;
+   width: 50px;
+
+}
+nav{
+    margin-top: .25%;
+    margin-left: 1%;
+    margin-right: 1%;   
+    margin-bottom: .25%;
+
+}
+
+#subheader{
+    margin-top: .5%;
+    text-align: center;
+    font-size: 25px;
+    color: var(--text-color);
+    background-color: #7E7339;
+
+}
+#RRsubheader{
+    margin-top: .5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
+    font-size: 20px;
+    color: #401201;
+
+}
+#subheader p{
+    margin-top: .5%;
+    margin-left: 1%;
+    margin-right: 1%;
+
+
+}
+#RRsubheader p{
+    margin-top: .5%;
+  
+    background-color: #7E7339;
+
+}
+#main-nav a{
+    color: var(--text-color);
+    text-decoration: none; /*Remove underline */
+    display: flex;
+    align-items: center;
+
+}
+
+nav img{
+    padding-right: 4px;
+
+}
+
+#mid-section{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    color:var(--text-color);
+    text-align: center;
+}
+
+#mid-section p{
+    font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+#day{
+    position: relative;
+    left:  40px;
+}
+#nite{
+    position: relative;
+    right:  40px;
+}
+
+#line{
+    text-align: center;
+    max-height: max-content;
+    width: 5%;
+}
+
+#line img{
+    height: 100%;
+    width: 100%;
+
+}
+
+#main-nav ul {
+    /* Remove list indent */
+    padding-inline-start: 0px;
+    list-style-type: none;
+    margin: 0%;
+}
+ th{
+    background-color: #7E7339;
+    width: 450px;
+
+  }
+
+  td{
+    background-color: #C6985F;
+    width: max-content;
+    height: 500px;
+
+    margin-left: 5%;
+}
+
+
+
+  table {
+    color: var(--text-color);
+    border-collapse: collapse;  
+    justify-content:stretch;
+    align-items:center;
+    text-align: center;
+
+}
+
+table tr:nth-child(2)
+{
+}
+
+
+table p{
+    margin: 0;
+    text-align:left;
+    padding-bottom: 2%;
+
+}
+table ul{
+    margin: 0;
+    text-align:left;
+
+}
+
+td:nth-child(2){
+    width: 1000px;
+}
+
+
+.Menu{
+    justify-content:  space-between;;
+    align-items: stretch;   
+     background-image: url("images/cute-coffee-shop-1920w.jpg");
+
+}
+
+.Menu button{
+    background-color: #413130;
+}
+
+
+
+.drinks img, .food img{
+    width: 200px;
+    height:  250px;
+}
+#content {
+    padding: 5px;
+    width: 80%;
+    margin: auto; /*Center horizontally */
+    border-radius: 5px;
+    color: var(--text-color);
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+
+}
+
+#content h2{
+  
+    color: #F9EEE3;
+  
+
+}
+
+#content p{
+    background-color: #413130;
+}
+
+#daypic{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  
+}
+#nightpic{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+  
+}
+
+
+#daypic img{
+    width: 450px;
+    height: 250px;
+    }
+
+#nightpic img{
+    width: 450px;
+    height:250px;
+        }
+
+
+#dusk img{
+    width: 450px;
+    height: 250px;
+    }
+
+#dawn img{
+
+        width: 450px;
+        height: 250px;
+        }
+
+.button{
+    text-align: center;
+}
+
+.popup #login{
+    background-color: var(--popup-color);
+    box-sizing: border-box;
+    position: absolute;
+    top: var(--top1);
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    padding: 10%;
+    border: 2px solid var(--border-color);
+    /*z-index: var(--cover-pop); /* Move the image behind the content */
+
+
+}
+.popup #cart{
+    background-color: var(--popup-color);
+    box-sizing: border-box;
+    position: absolute;
+    top: var(--top2);
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 600px;
+    border: 2px solid var(--border-color);
+    /*z-index: var(--cover-pop); /* Move the image behind the content */
+
+
+}
+.popup li {
+        /* Remove list indent */
+        padding-inline-start: 0px;
+        list-style-type: none;
+    
+}
+
+#cart{
+    width: 100px;
+    height:100px;
+    font-size: larger;
+    padding: 10%;
+
+}
+
+#Founder{
+max-width: max-content;
+margin-right: 2%;
+
+}
+.drinksContainer{
+}
+
+.foodContainer{
+}
+
+#center{
+    display: flex;
+   text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.align{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;}
+
+#center img{
+    display: inline-flex;
+    width: 400px;
+    align-content: center;
+    height: auto;
+}
+
+.order{
+    width: 100%;
+
+}
+
+#submit{
+    background-color: #401201;
+    border: 2px solid black;
+}
+.top{
+    margin-bottom: 2%;
+}
+.fcontent{
+    margin-right: 10%;
+    margin-left: 10%;
+    background-color: #CEAA78;
+    
+
+}
+.fcontent p{
+    font-size: larger;
+    font-weight: bold;
+    color: var(--text-color);
+   
+
+}
+
+.fcontent h2{
+
+    color:#4F3323;
+}
+
+.fcontent h1{
+
+    color:#4F3323;
+}
+.fcontenttext {
+    color:#4F3323;
+}
+
+.fcontent img{
+    height: 200px;
+    width: auto;
+}
+
+#heading section{
+    justify-content: end;
+}
+/* Hamburger */
+#hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    text-align: end;
+
+}
+
+.hide-small{
+    display: none;
+}
+
+/*hide/show*/
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+footer{
+    margin-top:30px;
+    border: 2px solid #401201;
+}
+
+button{
+    background-color: #BFA380;
+    color: var(--text-color);
+    border: none;
+}
+
+#btn-attributions{
+    background-color: #7E7339;
+    color: var(--text-color);
+    border: none;
+}
+
+.center{
+    text-align: center;
+}
+
+
+.center-form{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-section{
+    text-align: center;
+}
+
+#forward-arrow {
+ 
+    font-size: 3em;
+    padding-top: 300%;
+    padding-left: 20%;
+    padding-right: 20%;
+
+  }
+  
+  #backward-arrow {
+
+    font-size: 3em;
+    padding-top: 300%;
+    padding-right: 10%;
+  }
+
+  #thumbs{
+    text-align: center;
+   
+  }
+
+  #thumbs img{
+    height: 60px;
+    width: 50px;
+  }
+
+  #contact-form{
+    border: 2px solid black;
+    width: max-content;
+    display: block;
+    position: relative;
+    left: 31%;
+    font-size: 2em;
+    background-color:#413130;
+  }
+
+  form input:not([type="checkbox"]):not([type="radio"]),
+form textarea,
+form button,
+select {
+  font-size: 0.75em;
+  padding: 5px;
+}
+
+iframe{
+    width: 375px;
+    height: 355px;
+}
+/*
+Side panel credit ->https://codepen.io/dcode-software/pen/OJxEWWz
+*/
+.wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .side-panel-toggle {
+    width: auto;
+    height: 40px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+  
+    color: #ffffff;
+    background:#4F3323;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .side-panel-toggle:hover {
+    background:#BF9075;
+  }
+  
+  .sp-icon-close {
+    display: none !important;
+  }
+  
+  .side-panel {
+    display: none;
+    width: auto;
+    height: min-content;
+    flex-shrink: 0;
+    padding: 20px;
+    color: #ffffff;
+    background:#4F3323;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  }
+  
+  .side-panel-open .side-panel {
+    display: initial;
+  }
+  
+  .side-panel-open .sp-icon-open {
+    display: none !important;
+    
+  }
+  
+  .side-panel-open .sp-icon-close {
+    display: initial ;
+  }
+  
+/* For larger resoultions */
+@media only screen and (min-width: 600px) {
+    .columns{
+        display: flex;
+        flex-direction: row;
+        padding: 15px 25px;
+
+    }
+  
+    #main-nav li {
+        display: inline-block;
+    }
+    .show-menu{
+        display: none;
+    }
+    .one
+    {
+        flex: 1;
+    }
+ #hamburger{
+        display: none;
+    }
+    .hide-small {
+        display: flex;
+
+    }
+    .popup #cart{
+        background-color: var(--popup-color);
+        box-sizing: border-box;
+        position: absolute;
+        top: 65%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        border: 2px solid var(--border-color);
+        /*z-index: var(--cover-pop); /* Move the image behind the content */
+    
+    
+    }
+    .two
+    {
+        flex: 2;
+    }
+    .three
+    {
+        flex: 3;
+    }
+    .four
+    {
+        flex: 4;
+    }
+    .half
+    {
+        flex: 50%;
+    }
+  
+   td{
+    background-color: #C6985F;
+    height: 0px;
+    width: max-content;
+    margin-left: 5%;
+}
+}
+
+
+
