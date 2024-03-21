@@ -125,7 +125,9 @@ const getCurrentImageFood = () => {
 
 const signin = () =>{
     const root = document.querySelector(":root");
-    root.style.setProperty("--square-top", pos + "px");
+    document.getElementById("signin-pop").classList.remove("hide");
+
+    
 };
 
 const cart = () => {
@@ -138,6 +140,7 @@ const Order = () => {
     alert("added to order");  
 };
 
+  
 
 const toggleMenu = () => {
         const mainNav= document.getElementById("main-nav");
@@ -360,6 +363,7 @@ const FeaturedDay = async (item) => {
         const logoImg = document.createElement("img");
         logoImg.src =  "images/sun.png";
 
+        
         logo.append(logoImg);
         allMenusSection.append(logo);
     
@@ -1162,19 +1166,161 @@ const FeaturedDay = async (item) => {
                                 foodContainer.append(foodItem);
                         
                             };
+
+const showEmailResult = async(e) => {
+e.preventDefault();
+
+const result = document.getElementById("result");
+let response = await getElementResult();
+
+if(response.status == 200){
+    result.innerHTML = "Email successfully sent";
+} else {
+    result.innerHTML = "Sorry, your email was not sent";
+}
+};
+
+const getElementResult = async () => {
+const form = document.getElementById("contact-form");
+const formData = new FormData(form);
+const object = Object.fromEntries(formData);
+const json = JSON.stringify(object);
+const result = document.getElementById("result");
+result.innerHTML = "Please wait ....";
+
+try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+
+        method: "POST",
+        headers: {
+            "Content-Type":"application/json",
+            Accept:"application/json"
+        },
+        body:json
         
+
+    });
+
+    return response;
+} catch(error){
+    console.log(error);
+    result.innerHTML = "Sorry, your email couldn't be sent";
+}
+
+};
+
+const submitDayForm = (e) => {
+    e.preventDefault(); //don't refresh the page
+    console.log("xxx");
+
+    const form = e.target
+    const name = form.elements["item-name"].value;
+    const desc = form.elements["item-description"].value;
+    const img = form.elements["imgupload"].value;
+    const recipie = form.elements["recipieupload"].value;
+
+
+    const type = getRadioValue("Type");
+    const ing1 = form.elements["ing-1"].value;
+    const ing2 = form.elements["ing-2"].value;
+    const ing3 = form.elements["ing-3"].value;
+    const ing4 = form.elements["ing-4"].value;
+    const ing5 = form.elements["ing-5"].value;
+
+
+    //console.log(name + " "+ desc + " "+ img + " "+ type + " "+ ing1);
+
+    const list = document.createElement("ul");
+    const nameli = document.createElement("li")
+    const descli = document.createElement("li")
+    const imgli = document.createElement("li")
+    const typeli = document.createElement("li")
+    const recipieli = document.createElement("li")
+
+    const ing1li = document.createElement("li")
+    const ing2li = document.createElement("li")
+    const ing3li = document.createElement("li")
+    const ing4li = document.createElement("li")
+    const ing5li = document.createElement("li")
+
+    nameli.innerHTML = "name:" + name;
+    descli.innerHTML = "desc:" + desc;
+    imgli.innerHTML = "img:" + img;
+    recipieli.innerHTML = "recipie:" + recipie;
+
+    typeli.innerHTML = "type:" + type;
+    ing1li.innerHTML = "ing1:" + ing1;
+    ing2li.innerHTML = "ing2:" + ing2;
+    ing3li.innerHTML = "ing3:" + ing3;
+    ing4li.innerHTML = "ing4:" + ing4;
+    ing5li.innerHTML = "ing5:" + ing5;
+
+    list.append(nameli);
+    list.append(descli);
+    list.append(imgli);
+    list.append(typeli);
+    list.append(recipieli);
+    let i=1;
+    let ingredients= "ing"+1+"li";
+    console.log(ingredients);
+    console.log(ing1li.innerHTML);
+
+    while(ingredients != null)
+    {
+        list.append(ingredients);
+        i++
+
+    }
+
+    document.getElementById(side).append(list);
+    result.innerHTML = "Form successfully sent";
+
+
+
+
+
+
+
+
+};
+
+const getRadioValue = (radioName) => {
+    const radios = document.getElementsByName(radioName);
+
+    for(let i in radios){
+        if(radios[i].checked){
+            return radios[i].value;
+        }
+    }
+
+    return "";
+
+};
+
+
+//Side panel credit ->https://codepen.io/dcode-software/pen/OJxEWWz
+document.querySelector(".side-panel-toggle").addEventListener("click", () => {
+    document.querySelector(".wrapper").classList.toggle("side-panel-open");
+    if(document.getElementById("side-panel-button").innerHTML=="Close Panel")
+    {
+        document.getElementById("side-panel-button").innerHTML="Recommend A Day Menu Item"
+    }
+    else{
+        document.getElementById("side-panel-button").innerHTML="Close Panel"
+
+    }
+
+  });
 
 
 
 //document.getElementById("signin").onclick = signin;
 //document.getElementById("cart-btn").onclick = cart;
-//document.getElementById("pic1").onmouseenter = fade;
-//document.getElementById("pic1").onmouseleave = show;
 
-//document.getElementById("pic2").onmouseenter = fade2;
-//document.getElementById("pic2").onmouseleave = show2;
 
 loadMenu();
+document.getElementById("day-item").onsubmit = submitDayForm;
+//document.getElementById("night-item").onsubmit = submitNiteForm;
 
 
 if(document.getElementById("btn-day"))
@@ -1201,6 +1347,8 @@ if(document.getElementById("btn-attributions"))
 {
     document.getElementById("btn-attributions").onclick = attributions;
 }
+//document.getElementById("contact-form").onsubmit = showEmailResult;
+
 
 document.getElementById("contact-form").onsubmit = showEmailResult;
 // document.getElementById("forward-arrow-drink").onclick = slideForwardDrink;

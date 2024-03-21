@@ -1,5 +1,5 @@
 const submitRaccoonForm = (e) => {
-    e.prevebtDefault(); //don't refresh the page
+    e.prevetDefault(); //don't refresh the page
     console.log("xxx");
 
     const form = e.target

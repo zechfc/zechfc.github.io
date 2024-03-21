@@ -491,6 +491,13 @@ button{
     text-align: center;
 }
 
+
+.center-form{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .info-section{
     text-align: center;
 }
@@ -520,6 +527,90 @@ button{
     height: 60px;
     width: 50px;
   }
+
+  #contact-form{
+    border: 2px solid black;
+    width: max-content;
+    display: block;
+    position: relative;
+    left: 31%;
+    font-size: 2em;
+    background-color:#413130;
+  }
+
+  form input:not([type="checkbox"]):not([type="radio"]),
+form textarea,
+form button,
+select {
+  font-size: 0.75em;
+  padding: 5px;
+}
+
+iframe{
+    width: 375px;
+    height: 355px;
+}
+/*
+Side panel credit ->https://codepen.io/dcode-software/pen/OJxEWWz
+*/
+.wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .side-panel-toggle {
+    width: auto;
+    height: 40px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+  
+    color: #ffffff;
+    background:#4F3323;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .side-panel-toggle:hover {
+    background:#BF9075;
+  }
+  
+  .sp-icon-close {
+    display: none !important;
+  }
+  
+  .side-panel {
+    display: none;
+    width: auto;
+    height: min-content;
+    flex-shrink: 0;
+    padding: 20px;
+    color: #ffffff;
+    background:#4F3323;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  }
+  
+  .side-panel-open .side-panel {
+    display: initial;
+  }
+  
+  .side-panel-open .sp-icon-open {
+    display: none !important;
+    
+  }
+  
+  .side-panel-open .sp-icon-close {
+    display: initial ;
+  }
+  
 /* For larger resoultions */
 @media only screen and (min-width: 600px) {
     .columns{
