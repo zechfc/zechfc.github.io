@@ -139,47 +139,7 @@ const pickmeup = () => {
 };
 //https://api.openbrewerydb.org/breweries
 
-const getItems = async () => {
-        const url = "menu.json";
-        try {
-          const response = await fetch(url);
-          return response.json();
-        } catch (error) {
-          console.log(error);
-        }
-      };
 
-      const loadMenu = async () => {
-        const items = await getItems();
-    
-        items.forEach((item) => {
-            if (item.menu == "dawn") {
-                if (item.type == "Drink" && item.feature == true) {
-                    FeaturedDay(item);
-                } else if (item.type == "Drink" && item.feature == false) {
-                    drinkDay(item);
-                } else if (item.type == "Food" && item.feature == true) {
-                    FeaturedDayFood(item);
-                } else if (item.type == "Food" && item.feature == false) {
-                    FoodDay(item);
-                }
-            } 
-            if (item.menu == "dusk") {
-                if (item.type == "Drink" && item.feature == true) {
-                    FeaturedNite(item);
-                } else if (item.type == "Drink" && item.feature === false) {
-                    drinkNite(item);
-                } else if (item.type == "Food" && item.feature === true) {
-                    FeaturedNiteFood(item);
-                } 
-                else if (item.type == "Food" && item.feature === false) {
-                    FoodNite(item);
-                }
-            }
-        });
-    };
-  
-                    
 
 const submitForm = (e) => {
     e.preventDefault(); //don't refresh the page
@@ -301,7 +261,6 @@ document.querySelector(".side-panel-toggle").addEventListener("click", () => {
 //document.getElementById("cart-btn").onclick = cart;
 
 
-loadMenu();
 document.getElementById("items").onsubmit = submitForm;
 
 if(document.getElementById("btn-day"))

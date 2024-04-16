@@ -1,5 +1,35 @@
 
-    
+const getItems = async () => {
+    const url = "menu.json";
+    try {
+      const response = await fetch(url);
+      return response.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const loadMenu = async () => {
+    const items = await getItems();
+
+    items.forEach((item) => {
+   
+        if (item.menu === "dusk") {
+            if (item.type === "Drink" && item.feature == true) {
+                FeaturedNite(item);
+            } else if (item.type === "Drink" && item.feature === false) {
+                drinkNite(item);
+            } else if (item.type === "Food" && item.feature === true) {
+                FeaturedNiteFood(item);
+            } 
+            else if (item.type === "Food" && item.feature === false) {
+                FoodNite(item);
+            }
+        }
+    });
+};
+
+                
     const FeaturedNite = async (item) => {
     
         
@@ -471,3 +501,4 @@
                         foodContainer.append(foodItem);
                 
                     };
+                    loadMenu();
