@@ -79,7 +79,7 @@
     "img": "images/pie.jpg",
     "description": "The cherry on top right before sleep",
     "prices":["5.00","3.50","2.00"],
-    "amt":[],
+    "amt":[3,2,1],
     "ingredients": ["Cinnamon", "Cherries", "Sugar", "Ice Cream", "Milk"]
 },
 {
