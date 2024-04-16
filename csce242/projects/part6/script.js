@@ -303,7 +303,6 @@ document.querySelector(".side-panel-toggle").addEventListener("click", () => {
 
 loadMenu();
 document.getElementById("items").onsubmit = submitForm;
-document.getElementById("contact-form").onsubmit = showEmailResult;
 
 if(document.getElementById("btn-day"))
 {
